@@ -1,0 +1,433 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Instagram</title>
+        <style>
+            .main{
+                justify-content: center;
+                padding: 0 0 0 0px;
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+
+            }
+            .phone{
+                margin-right: 32px;
+                display: block;
+                margin-bottom: 12px;
+                background-size: 468.32px 634.15px;
+                height: 581.15px;
+                background-image: url(https://static.cdninstagram.com/rsrc.php/v3/y4/r/ItTndlZM2n2.png);
+                background-position: -46px 0;
+                flex-basis: 380.32px;
+                align-self: center;
+                color:rgb(38, 38, 38);
+            }
+            .phone1{
+                flex-direction: column;
+                box-sizing: border-box;
+                display: flex;
+                align-items: stretch;
+                margin-left: 113px;
+                margin-top: 27px;
+                vertical-align: baseline;
+                position: relative;
+                direction: ltr;
+                
+            }
+            .photo{
+                opacity: 0;
+                width: 250px;
+                height: 538.84px;
+                vertical-align: baseline;
+                position: absolute;
+                z-index: 2;
+                overflow-x: clip;
+                overflow-y: clip;
+                transition-duration: 1.5s;
+                transition-property: opacity;
+            }
+            .login{
+                color: rgb(38, 38, 38);
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                justify-content: center;
+                margin-top: 12px;
+                max-width: 350px;
+            }
+            .login1{
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(219, 219, 219);
+                border-radius: 1px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                font: inherit;
+                font-size: 100%;
+                margin: 0 0 10px;
+                padding: 10px 0;
+                position: relative;
+            }
+            .login1_1, .login1_2_1{
+                margin-top: calc(var(36));
+                margin-bottom: calc(var(12));
+                flex: 0 0 auto;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: stretch;
+                display: flex;
+                box-sizing: border-box;
+                position: relative;
+
+            }
+            .login1_2{
+                margin-bottom: 10px;
+                max-width: 350px;
+                width: 100%;
+            }
+            .login1_2_1_1, .login1_2_1_2{
+                margin: 0 40px 6px;
+            }
+            .login1_2_1_1_1{
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: relative;
+                border: 1px solid rgb(219, 219, 219);
+                background-color: rgb(250, 250, 250);
+                color: rgb(38, 38, 38);
+                border-radius: 3px;
+            }
+            .login1_2_1_1_1_1{
+                border: 0;
+                display: flex;
+                flex: 1 0 0px;
+                font: inherit;
+                font-size: 100%;
+                height: 36px;
+                margin: 0;
+                min-width: 0;
+                padding: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            .login1_2_1_1_1_1_1{
+                border: 0;
+                color: rgb(var(--ig-secondary-text));
+                font: inherit;
+                font-size: var(--system-12-font-size);
+                height: 36px;
+                left: 8px;
+                line-height: 36px;
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                pointer-events: none;
+                position: absolute;
+                right: 0;
+                text-overflow: ellipsis;
+                transform-origin: left;
+                vertical-align: baseline;
+                white-space: nowrap;
+            }
+            .login1_2_1_3{
+                margin-bottom: 8px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-top: 8px;
+                font-size: 14px;
+                flex: 0 0 auto;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: stretch;
+                display: flex;
+                box-sizing: border-box;
+                position: relative;
+                font: inherit;
+            }
+            .login1_2_1_4{
+                margin: 10 40 18px;
+            }
+            .login1_2_1_5{
+                margin: 8 8 40 40px;
+                line-height: 18px;
+                position: relative;
+                font-size: 14px;
+                color: rgb(38, 38, 38);
+                box-sizing: border-box;
+                align-content: stretch;
+                align-items: stretch;
+            }
+
+            .login2{
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(219, 219, 219);
+                border-radius: 1px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                font: inherit;
+                font-size: 100%;
+                margin: 0 0 10px;
+                padding: 10px 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            .login2_1{
+                display: block;
+                color: rgb(142, 142, 142);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 18px;
+                margin: -3px 0 -4px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            }
+            .login2_1_1{
+                color: rgb(38, 38, 38);
+                font-size: 14px;
+                margin: 15px;
+                text-align: center;
+            }
+            .login2_1_1_1{
+                color: rgb(0, 149, 246);
+                box-sizing: border-box;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .login3{
+                flex-direction: column;
+                display: flex;
+            }
+            .login3_1_1{
+                text-align: center;
+                font-size: 14px;
+                display: block;
+                position: relative;
+            }
+            .login3_2{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 10 0 10 0px;
+
+            }
+            .text{
+                background: rgb(250, 250, 250);
+                border: 0;
+                flex: 1 0 auto;
+                margin: 0;
+                outline: none;
+                overflow: hidden;
+                padding: 9px 0 7px 8px;
+                text-overflow: ellipsis;
+                font-size: 16px;
+            }
+            input{
+                text-rendering: auto;
+                text-shadow: none;
+                cursor: text;
+                text-transform: none;
+            }
+            .button_login{
+                background: none;
+                background-color: rgb(0, 149, 246);
+                border: none;
+                box-sizing: border-box;
+                cursor: pointer;
+                display: block;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                pointer-events: auto;
+                text-align: center;
+                text-overflow: ellipsis;
+                text-transform: inherit;
+                width: 268.4px;
+                padding: 7 7 16 16px;
+                line-height: 18px;
+            }
+            .button_login1{
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: stretch;
+                display: flex;
+                box-sizing: border-box;
+                position: relative;
+                color: rgb(255, 255, 255);
+                line-height: 18px;
+                font-size: 14px;
+                text-align: center;
+            }
+            .-or-{
+                display: flex;
+                flex-direction: row;
+                line-height: 18px;
+            }
+            .line{
+                position: relative;
+                flex-grow: 1;
+                top: 6,3px;
+                flex-shrink: 1;
+                height: 1px;
+                background-color: rgb(219, 219, 219);
+                color: rgb(38, 38, 38);
+                display: block;
+            }
+            .or{
+                margin-left: 18px;
+                margin-right: 18px;
+                color: rgb(142, 142, 142);
+                line-height: 15px;
+                font-weight: 600;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            .login_with.facebook{
+                border: none;
+                text-align: center;
+                width: auto;
+                background: none;
+                font-size: 14px;
+
+            }
+            .logo_facebook{
+                border: 0;
+                display: inline-block;
+                font: inherit;
+                font-size: 100%;
+                margin: 0;
+                margin-right: 8px;
+                padding: 0;
+                position: relative;
+                top: 3px;
+                vertical-align: baseline;
+                background-repeat: no-repeat;
+                background-position: -414px -259px;
+                height: 16px;
+                width: 16px;
+                color: rgb(0, 149, 246);
+                background-image: url(/rsrc.php/v3/y5/r/TJztmXpWTmS.png);
+            }
+            .login_facebook_text{
+                color: #385185;
+            }
+            .forget{
+                margin-top: 12px;
+                color: rgb(0, 55, 107);
+                cursor: pointer;
+            }
+            .google_play{
+                display: inline;
+                padding: 0 0 0 0px;
+                margin-right: 8px;
+                box-sizing: border-box;
+                background-color: transparent;
+                touch-action: manipulation;
+            }
+            .logo_google{
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <main class ="main" role = "main">
+            <article class = "main1">
+                <div class="phone">
+                    <div class="phone1">
+                    <img alt class="photo" src="https://www.instagram.com/images/instagram/xig/homepage/screenshots/screenshot1.png?__d=www">
+                    <img alt class="photo" src="https://www.instagram.com/images/instagram/xig/homepage/screenshots/screenshot2.png?__d=www">
+                    <img alt class="photo" src="https://www.instagram.com/images/instagram/xig/homepage/screenshots/screenshot3.png?__d=www">
+                    <img alt class="photo" src="https://www.instagram.com/images/instagram/xig/homepage/screenshots/screenshot4.png?__d=www">
+                    </div>
+                </div>
+    
+                <div class = "login">
+                    <div class="login1">
+                        <div class="login1_1">
+                            <i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/yr/r/NL0hPV-L09m.png&quot;); background-position: 0px 0px; background-size: 176px 186px; width: 174px; height: 50px; background-repeat: no-repeat; display: inline-block;"></i>
+                        </div>
+                        <div class="login1_2">
+                            <div class="login1_2_1">
+                                <div class="login1_2_1_1">
+                                    <div class="login1_2_1_1_1">
+                                        <label class="login1_2_1_1_1_1">
+                                            <span class="login1_2_1_1_1_1_1">Phone number, username or email address</span>
+                                            <input aria-label="Phone number, username or email address" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="text" value="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="login1_2_1_2">
+                                    <label class="login1_2_1_1_1_1">
+                                        <span class="login1_2_1_1_1_1_1">Password</span>
+                                        <input aria-label="Password" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="text" value="">
+                                    </label>
+                                </div>
+                                <div class="login1_2_1_3">
+                                    <button class="button_login">
+                                        <div class="button_login1">Log in</div>
+                                    </button>
+                                </div>
+                                <div class="login1_2_1_4">
+                                    <div class="-or-">
+                                        <div class="line"></div>
+                                        <div class="or">or</div>                                        </div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                                <div class="login1_2_1_5">
+                                    <button class="login_with_facebook">
+                                        <span class="logo_facebook"></span>
+                                        <span class="login_facebook_text">Log in with Facebook</span>
+                                    </button>
+                                </div>
+                            <a class = "forget" href="" role="link" tabindex="0">Forgotten your password?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login2">
+                        <div class="login2_1">
+                            <p class = "login2_1_1">
+                                Don't have an account? 
+                                <a class = "" href = "" role = "link" tabindex="0">
+                                    <span class = "login2_1_1_1">Sign up</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="login3">
+                        <div class="login3_1">
+                            <span class = "login3_1_1">Get the app.</span>
+                        </div>
+                        <div class="login3_2">
+                            <a aria-label="Get it on Google Play" class = "google_play" href = "" role = "link" tabindex = "0" target = "_blank_">
+                                <img alt = "Get it on google Play" class = "logo_google" src = "https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png">
+                            </a>
+                            <a aria-label="Get it from Microsoft" class = "google_play" href = "" role = "link" tabindex = "0" target = "_blank_">
+                                <img alt = "Get it from Microsoft" class = "logo_google" src = "https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer class="main2" role = "contentinfo">
+                <div class="main2_1">
+                    <div class="main2_1_1">
+
+                    </div>
+                    <div class="main2_1_2">
+
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
