@@ -5,7 +5,7 @@
 <em>Instructor: </em> <strong>Bobur Mukhsimbayev</strong><br>
 <br>
 <strong>Lab 1: Introduction to Web Development ✅</strong><br>
-<strong>Lab 2: Web development roadmap 🔜</strong><br>
+<strong>Lab 2: Web development roadmap ✅</strong><br>
 <strong>Lab 3: JavaScript 🔜</strong><br>
 <strong>Lab 4: Introduction to Angular 🔜</strong><br>
 <strong>Lab 5: Angular Components 🔜</strong><br>
