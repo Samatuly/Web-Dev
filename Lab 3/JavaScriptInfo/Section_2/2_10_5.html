@@ -1,0 +1,16 @@
+<html>
+<body>
+
+  <script>
+    'use strict';
+
+    let login = prompt("Write your status: ", "");
+    login = String(login);
+    let message = (login == 'Employee') ? 'Hi!' :
+    (login == 'Director') ? 'Hello, Mr.Director' :
+    (login == '') ? 'Nothing' : '';
+    alert(message);
+  </script>
+
+</body>
+</html>

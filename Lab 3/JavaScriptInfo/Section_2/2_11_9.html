@@ -1,0 +1,30 @@
+<html>
+<body>
+
+  <script>
+    'use strict';
+
+    let userName = prompt("Who are you?", "");
+
+    if (userName === 'Admin') {
+        let pass = prompt('Password?', '');
+        if (pass === 'I am boss') {
+            alert('Hello!');
+        }
+        else if (pass === '' || pass === null) {
+            alert('Back');
+        }
+        else {
+            alert('Incorrect');
+        }
+    }
+    else if (userName === '' || userName === null) {
+        alert('Back');
+    }
+    else {
+        alert("I do not know");
+    }
+  </script>
+
+</body>
+</html>
