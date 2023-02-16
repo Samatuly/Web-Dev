@@ -1,11 +1,23 @@
 <html>
-<body>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="5_10_2_test.js"></script>
+<script>
 
-  <script>
-    'use strict';
+  function topSalary(salaries) {
+  
+    let maxSalary = 0;
+    let maxName = null;
+  
+    for(const [name, salary] of Object.entries(salaries)) {
+      if (maxSalary < salary) {
+        maxSalary = salary;
+        maxName = name;
+      }
+    }
+  
+    return maxName;
+  }
 
-    
-  </script>
+</script>
 
-</body>
 </html>

@@ -1,11 +1,18 @@
 <html>
-<body>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="5_9_1_test.js"></script>
+<script>
 
-  <script>
-    'use strict';
+  function sumSalaries(salaries) {
+  
+    let sum = 0;
+    for (let salary of Object.values(salaries)) {
+      sum += salary;
+    }
+  
+    return sum;
+  }
 
-    
-  </script>
+</script>
 
-</body>
 </html>
