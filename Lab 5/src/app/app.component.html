@@ -1,0 +1,36 @@
+<app-top-bar></app-top-bar>
+<app-product-list></app-product-list>
+<!--<app-product-alerts></app-product-alerts>-->
+
+<!--<div class="container">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
+
+<p class = "title_category">Online-store of Kaspi.kz</p>
+
+<a class = "all_categories">
+  <a routerLink="/product-list" routerLinkActive="active" ariaCurrentWhenActive="page" class = "box_category">
+    <p class = "text_category">
+      Smartphones
+      <img class = "image_category" src="https://kaspi.kz/img/Phone.png"></p>
+  </a>
+
+  <a onclick="window.location.href = '/'" class = "box_category">
+    <p class = "text_category">
+      Laptops
+      <img class = "image_category" src="https://kaspi.kz/img/Computer.png"></p>
+  </a>
+
+  <a onclick="window.location.href = '/'" class = "box_category">
+    <p class = "text_category">
+      Household appliances
+      <img class = "image_category" src="https://kaspi.kz/img/HomeApp.png"></p>
+  </a>
+
+  <a onclick="window.location.href = '/'" class = "box_category">
+    <p class = "text_category">
+      TV
+      <img class = "image_category" src="https://kaspi.kz/img/TV.png"></p>
+  </a>
+</a>
+<router-outlet></router-outlet>
