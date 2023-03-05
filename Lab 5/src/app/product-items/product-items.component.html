@@ -1,1 +1,29 @@
-<p>product-items works!</p>
+<a [title]="product.name + ' details'" [href]="product.link" target="_blank">
+  <span class = "name_product">{{ product.name }}</span>
+</a>
+
+<button class="remove_btn" (click)="removeProduct()">
+  <span class="x" aria-hidden="true">x</span>
+</button>
+
+<div>
+  <img src="{{ product.image }}" alt="">
+</div>
+
+<p class="rating">Rating: {{ product.rating }}</p>
+
+<p class="price">Price: {{ product.price | number:'.0'}}</p>
+
+<p *ngIf="product.description">{{ product.description }}</p>
+
+<button type="button" (click)="share_wtsp(product.link)">
+  Share to WhatsApp
+</button>
+
+<button type="button" (click)="share_telegram(product.link)" class="btn_telegram">
+  Share to Telegram
+</button>
+
+<button class="like_btn" (click)="liked()">
+  <span class="cnt">{{ cnt }}</span>
+</button>

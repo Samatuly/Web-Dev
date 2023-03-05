@@ -333,3 +333,9 @@ svg#clouds {
   margin-top: 5px;
   width: 180px;
 }
+
+.navig {
+  margin: 20px 120px;
+  padding: 20px;
+  border-radius: 15px;
+}

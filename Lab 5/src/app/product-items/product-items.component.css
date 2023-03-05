@@ -1,0 +1,60 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #f3f5f7;
+}
+.price {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rating {
+  font-weight: 700;
+}
+
+.items {
+  padding: 20px;
+  width: 1260px;
+  margin-bottom: 50px;
+  border: 1px solid red;
+}
+
+img {
+  padding: 5px;
+  margin-top: 20px;
+  /* border: 1px solid purple; */
+  width: 200px;
+  height: 175px;
+  object-fit: contain;
+}
+.name_product{
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn_telegram {
+  margin-left: 20px;
+}
+.like {
+  margin-left: 20px;
+  font-size: 20px;
+}
+.cnt {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  padding: 0 0 0 0px;
+}
+.remove_btn {
+  margin-left: 20px;
+}
+.like_btn{
+  margin-left: 20px;
+}
+.x{
+  color: rgb(255, 255, 255);
+}

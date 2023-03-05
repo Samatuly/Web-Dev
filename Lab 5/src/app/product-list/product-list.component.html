@@ -1,17 +1,8 @@
-<div *ngFor="let product of products">
-  <img [src] = "product.image"/>
-  <h3>
-    <a [title] = "product.name + ' details'">
-      {{product.name}}
-    </a>
-  </h3>
-
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
-
-  <p *ngIf = "product.rating">Rating: {{product.rating}}</p>
-
-  <button type = "button" class = "link" (click) = "share()">Share</button>
-
-  <a type = "button" class = "link" target = "_blank" href = "{{product.link}}">Details</a>
+<div *ngFor="let product of category; let i = index" class="items">
+  <!-- send the product items to product-items component -->
+  <app-product-items
+    [product]="product"
+    (remove)="onListRemove($event)">  <!-- get the remove data from child comp -->
+  </app-product-items>
 
 </div>

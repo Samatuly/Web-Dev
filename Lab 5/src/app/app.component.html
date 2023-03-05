@@ -9,28 +9,33 @@
 <p class = "title_category">Online-store of Kaspi.kz</p>
 
 <a class = "all_categories">
-  <a routerLink="/product-list" routerLinkActive="active" ariaCurrentWhenActive="page" class = "box_category">
+  <button class="box_category" (click)="categorySelect(1)">
     <p class = "text_category">
       Smartphones
       <img class = "image_category" src="https://kaspi.kz/img/Phone.png"></p>
-  </a>
+  </button>
 
-  <a onclick="window.location.href = '/'" class = "box_category">
+  <button class="box_category" (click)="categorySelect(2)">
     <p class = "text_category">
       Laptops
       <img class = "image_category" src="https://kaspi.kz/img/Computer.png"></p>
-  </a>
+  </button>
 
-  <a onclick="window.location.href = '/'" class = "box_category">
+  <button class="box_category" (click)="categorySelect(3)">
     <p class = "text_category">
       Household appliances
       <img class = "image_category" src="https://kaspi.kz/img/HomeApp.png"></p>
-  </a>
+  </button>
 
-  <a onclick="window.location.href = '/'" class = "box_category">
+  <button class="box_category" (click)="categorySelect(4)">
     <p class = "text_category">
       TV
       <img class = "image_category" src="https://kaspi.kz/img/TV.png"></p>
-  </a>
+  </button>
 </a>
+
+<div class="container">
+  <!-- use [] send the data to child component -->
+  <app-product-list [category]="category"></app-product-list>
+</div>
 <router-outlet></router-outlet>

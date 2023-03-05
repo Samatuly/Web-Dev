@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {products} from '../products';
-
+import { Component, Input} from '@angular/core';
+import { Product } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -8,18 +7,10 @@ import {products} from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
+  @Input() category: Product[] = [];   // get the products from app component
 
-  share() {
-    window.open('https://wa.me/87714105100', '_blank');
+  // remove product
+  onListRemove(product: Product){
+    this.category = this.category.filter((x:Product) => x != product)
   }
-
-  link(){
-    window.open('products.link', '_blank');
-  }
-
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
-  }
-
 }
