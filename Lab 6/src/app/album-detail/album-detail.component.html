@@ -1,0 +1,9 @@
+<a routerLink="/albums">Back to Albums</a>
+<div *ngIf="loaded">
+  <h4>{{albums.title}} #{{albums.id}}</h4>
+  <input type="text" placeholder="New Title"><button (click)="renameAlbum()">Save</button>
+  <br>
+  <a routerLink="/albums">To Albums</a>
+  <br>
+  <a routerLink="/albums/{{albums.id}}/photos">To Photos</a>
+</div>

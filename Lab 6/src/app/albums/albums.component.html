@@ -1,0 +1,8 @@
+<h1>Album Page!</h1>
+
+<ul>
+  <li *ngFor = "let albums of albums">
+    <a routerLink="/albums/{{albums.id}}"> {{albums.title}} </a>
+    <button class='delete' (click)="deleteAlbum(albums)">X</button>
+  </li>
+</ul>

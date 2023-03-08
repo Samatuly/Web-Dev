@@ -1,0 +1,8 @@
+.delete{
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
+  cursor: pointer;
+  margin-left: 10px;
+}
