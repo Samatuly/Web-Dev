@@ -8,20 +8,11 @@ class Product(models.Model):
     is_active = models.BooleanField(default = False)
 
     def __str__(self):
-        return{
-            'id' : self.id,
-            'name':self.name,
-            'description' : self.description,
-            'count': self.count,
-            'is_active': self.is_active,
-            'price': self.price
-        }
+        return self.name, self.price
 
 class Category(models.Model):
     name = models.CharField(max_length = 100)
 
     def __str__(self):
-        return{
-            'id': self.id,
-            'name': self.name
-        }
+        return self.name
+

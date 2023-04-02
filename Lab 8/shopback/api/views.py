@@ -1,48 +1,45 @@
 from django.shortcuts import render
 from django.http.response import JsonResponse, HttpResponse
-from api.models import Product, Category
-import json
+from django.forms import model_to_dict
+from . import models
 
 
 def product_list(request):
-    product_list = Product.objects.all()
-    pr_json = [p.to_json() for p in product_list]
-    return JsonResponse(pr_json, safe=False)
+    products = models.Product.objects.all()
+    products_list = list(products.values())
+    return JsonResponse(products_list, safe=False)
 
 
-def product_detail(request, product_id):
-    product_list = Product.objects.all()
+def product_detail(request, id):
+    product = models.Product.objects.filter(id=id).first()
+    if product is None:
+        return JsonResponse({'error': 'Product not found'}, status=404)
 
-    for i in product_list:
-        if(i.id == product_id):
-            return  JsonResponse(i.to_json())
-
-    return JsonResponse({'error': 'Dont have this product'})
+    # product_list = list(product.values())
+    product_dict = model_to_dict(product)
+    return JsonResponse(product_dict)
 
 
 def category_list(request):
-    category_list = Category.objects.all()
-    pr_json = [p.to_json() for p in category_list]
-    return JsonResponse(pr_json, safe=False)
+    categories = models.Category.objects.all()
+    categories_list = list(categories.values())
+    return JsonResponse(categories_list, safe=False)
 
 
-def category_detail(request, category_id):
-    category_list = Category.objects.all()
+def category_detail(request, id):
+    category = models.Category.objects.filter(id=id).first()
+    if category is None:
+        return JsonResponse({'error': 'Category not found'}, status=404)
 
-    for i in category_list:
-        if(i.id == category_id):
-            return  JsonResponse(i.to_json())
-
-    return JsonResponse({'error': 'Dont have this category'})
+    category_dict = model_to_dict(category)
+    return JsonResponse(category_dict)
 
 
-def category_products(request, category_id):
-    category_list = Category.objects.all()
+def category_products(request, id):
+    category = models.Category.objects.filter(id=id).first()
+    if category is None:
+        return JsonResponse({'error': 'Category not found'}, status=404)
 
-    pr_json = [p.to_json() for p in Product.objects.all()]
-
-    for i in category_list:
-        if (i.id == category_id):
-            return JsonResponse(pr_json, safe=False)
-
-    return JsonResponse({'error': 'Dont have product in this category'})
+    products = category.products.all()
+    products_list = list(products.values())
+    return JsonResponse(products_list, safe=False)
