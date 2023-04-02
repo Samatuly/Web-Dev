@@ -11,6 +11,6 @@
 <strong>Lab 5: Angular Components ✅</strong><br>
 <strong>Lab 6: Modules, Router ModuleGetting Data From RESTful APIs ✅</strong><br>
 <strong>Lab 7: Introduction to Python PL, Django ✅</strong><br>
-<strong>Lab 8: Building REST APIs With Django RESTFramework 🔜</strong><br>
+<strong>Lab 8: Building REST APIs With Django RESTFramework ✅</strong><br>
 <strong>Lab 9: Generic Views, Sessions,Users, and Registration 🔜</strong><br>
 <strong>Lab 10: DRF Serialization 🔜</strong><br>
