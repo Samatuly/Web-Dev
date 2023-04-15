@@ -1,0 +1,19 @@
+.items {
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#item-details {
+  padding: 10px;
+}
+
+#link-vacancy:hover {
+  color: red;
+}
+
+#link-vacancy {
+  color: black;
+  text-decoration: none;
+}
