@@ -13,7 +13,7 @@ export class VacanciesService {
 
   getCompanyVacancies(company_id:number):Observable<Vacancy[]>{
     return this.http.get<Vacancy[]>(
-      `${this.BASE_URL}/api/companies/${company_id}/vacancies`
+      `${this.BASE_URL}/api/companies/${company_id}/vacancies/`
     )
   }
 }
